@@ -1,0 +1,22 @@
+[project]
+name = "ai4science-daily-paper"
+version = "0.1.0"
+description = "An agent to fetch, analyze, and summarize daily AI for Science papers."
+dependencies = [
+    "langchain",
+    "langgraph",
+    "langchain_openai",
+    "pymupdf",
+    "arxiv",
+    "requests",
+    "pydantic",
+    "python-dotenv",
+    "lxml",
+    "pytest",
+    "pytest-mock",
+]
+
+[tool.langgraph]
+# This tells the 'langgraph' CLI where to find your compiled graph object.
+# The format is 'package_or_module:variable_name'.
+graph = "src.graph:get_graph"
